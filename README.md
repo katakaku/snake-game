@@ -1,25 +1,31 @@
 # 🐍 Snake Game ver.2
 
-A simple Snake game playable in the browser — built with HTML, CSS, and JavaScript.
+GitHubの使い方を学ぶ練習プロジェクトとして作成したスネークゲームです。
+ブランチ・Pull Request・コンフリクト解消・GitHub Pagesの公開など、GitHubの基本操作を一通り実践しました。
 
-## 🎮 Play
+## 🎮 プレイする
 
-**[▶ Play here](https://katakaku.github.io/snake-game/)**
+**[▶ ここでプレイ](https://katakaku.github.io/snake-game/)**
 
-## How to play
+## 遊び方
 
-| Key | Action |
+| キー | 操作 |
 |---|---|
-| `Space` | Start / Restart |
-| `↑ ↓ ← →` | Move snake |
+| `Space` | スタート / リスタート |
+| `↑ ↓ ← →` | スネークを動かす |
 
-Eat the red food to grow and earn points. The game ends if you hit a wall or yourself.
+赤いエサを食べるとスネークが成長し、10点獲得します。
+壁または自分の体に当たるとゲームオーバーです。
 
-## Features
+## 機能
 
-- Score & high score (saved in browser)
-- 3 speed settings: Normal / Fast / Very Fast
+- スコア表示・ハイスコア記録（ブラウザに保存）
+- 速度設定：ふつう / はやい / とても速い
 
-## Run locally
+## ローカルで動かす
 
-Just open `index.html` in your browser — no build tools needed.
+`index.html` をブラウザで開くだけで動きます。ビルド不要。
+
+## 学習記録
+
+[learning_notes.md](learning_notes.md) にGitHub学習メモをまとめています。
