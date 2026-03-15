@@ -1,7 +1,11 @@
 const canvas = document.getElementById('game-canvas');
 const ctx = canvas.getContext('2d');
 const scoreEl = document.getElementById('score');
+const highScoreEl = document.getElementById('high-score');
 const messageEl = document.getElementById('message');
+
+let highScore = parseInt(localStorage.getItem('snakeHighScore') || '0');
+highScoreEl.textContent = highScore;
 
 const GRID = 20;
 const COLS = canvas.width / GRID;
@@ -81,7 +85,14 @@ function draw() {
 function gameOver() {
   clearInterval(gameLoop);
   state = 'gameover';
-  messageEl.textContent = `ゲームオーバー！スコア: ${score}　スペースキーでリスタート`;
+  if (score > highScore) {
+    highScore = score;
+    localStorage.setItem('snakeHighScore', highScore);
+    highScoreEl.textContent = highScore;
+    messageEl.textContent = `新記録！ ${score}点　スペースキーでリスタート`;
+  } else {
+    messageEl.textContent = `ゲームオーバー！スコア: ${score}　スペースキーでリスタート`;
+  }
 }
 
 document.addEventListener('keydown', e => {
