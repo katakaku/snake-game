@@ -62,7 +62,7 @@ function update() {
   snake.unshift(head);
 
   if (head.x === food.x && head.y === food.y) {
-    score = 10;  // バグ：+= のつもりが = になっている
+    score += 10;
     scoreEl.textContent = score;
     spawnFood();
   } else {
