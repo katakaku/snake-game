@@ -37,6 +37,26 @@ h1 {
   margin: 0 auto;
 }
 
+#speed-control {
+  margin: 10px 0;
+}
+
+.speed-btn {
+  background: #16213e;
+  color: #a8dadc;
+  border: 1px solid #a8dadc;
+  padding: 5px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.speed-btn.active {
+  background: #e94560;
+  color: white;
+  border-color: #e94560;
+}
+
 #message {
   color: #a8dadc;
   font-size: 1rem;
