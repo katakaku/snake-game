@@ -11,7 +11,17 @@ const GRID = 20;
 const COLS = canvas.width / GRID;
 const ROWS = canvas.height / GRID;
 
-let snake, direction, nextDirection, food, score, gameLoop, state;
+let snake, direction, nextDirection, food, score, gameLoop, state, speed;
+
+// 速度ボタンの設定
+document.querySelectorAll('.speed-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelector('.speed-btn.active').classList.remove('active');
+    btn.classList.add('active');
+    speed = parseInt(btn.dataset.speed);
+  });
+});
+speed = 150;
 
 function init() {
   snake = [{ x: 10, y: 10 }];
@@ -108,7 +118,7 @@ document.addEventListener('keydown', e => {
       init();
       state = 'playing';
       messageEl.textContent = '矢印キーで操作';
-      gameLoop = setInterval(update, 150);
+      gameLoop = setInterval(update, speed);
     }
     return;
   }
